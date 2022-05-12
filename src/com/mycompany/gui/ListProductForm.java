@@ -149,8 +149,7 @@ public class ListProductForm extends BaseForm {
         int i = 0;
         for (Product p : list) {
             i++;
-            String urlImage = "http://localhost/Arena-web-app/public/uploads/" + p.getImage();
-            System.out.println(p.getImage());
+            String urlImage = "http://127.0.0.1:8000/uploads/" + p.getImage();
             Image placeHolder = Image.createImage(120, 90);
             EncodedImage enc = EncodedImage.createFromImage(placeHolder, false);
             URLImage urlim = URLImage.createToStorage(enc, urlImage, urlImage, URLImage.RESIZE_SCALE);
@@ -246,7 +245,7 @@ public class ListProductForm extends BaseForm {
 
             Dialog dig = new Dialog("Suppression");
 
-            if (dig.show("Suppression", "Vous voulez supprimer ce reclamation ?", "Annuler", "Oui")) {
+            if (dig.show("Suppression", "Vous voulez supprimer ce produit ?", "Annuler", "Oui")) {
                 dig.dispose();
             } else {
                 dig.dispose();

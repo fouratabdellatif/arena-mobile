@@ -49,7 +49,7 @@ public class MyApplication {
             current.show();
             return;
         }
-        new AddProductForm(theme).show();
+        new ListProductForm(theme).show();
     }
 
     public void stop() {
